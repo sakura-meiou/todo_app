@@ -1,0 +1,19 @@
+<!DOCTYPE html> <!-- おまじない --> 
+<html> <!--始まりと終わりを示す-->
+<head><!--表面には現れない詳細設定-->
+    <meta charset="utf-8">
+    <title>ToDoリスト</title>
+</head>
+<body> <!--ユーザーに見える部分-->
+    <h1>📋 ToDoリスト</h1>
+    <form method="POST">
+        <input type="text" name="todo" placeholder="やることを入力">
+        <button type="submit">追加</button>
+    </form>
+    <ul>
+      {% for todo in todos %}
+        <li>{{ todo }}</li>
+      {% endfor %}
+    </ul>
+</body>
+</html>
